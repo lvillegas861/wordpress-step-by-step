@@ -1,3 +1,4 @@
 <?php
-<!-- custom logo support -->
+
+// custom logo theme support
 add_theme_support( 'custom-logo' );
