@@ -4,6 +4,9 @@
 add_theme_support( 'custom-logo' );
 
 //customizer support
+
+//custom logo
+
 function basicwptheme_custom_logo_setup() {
     $defaults = array(
         'height'               => 100,
@@ -17,3 +20,9 @@ function basicwptheme_custom_logo_setup() {
 }
  
 add_action( 'after_setup_theme', 'basicwptheme_custom_logo_setup' );
+
+function theme_prefix_the_custom_logo() {
+    if( function_exists('the_custom_logo') ) {
+        the_custom_logo();
+    }
+}

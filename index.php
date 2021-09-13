@@ -11,6 +11,15 @@
       <!-- header area -->
       <header class="main-header">
           <div class="custom-logo">
+            <?php
+        if (get_custom_logo() ){
+            theme_prefix_the_custom_logo();
+        } else{
+            echo '<h1>' . get_bloginfo('name') . '</h1>';
+            echo '<h2>' . get_bloginfo('description') . '</h2>'; 
+        }
+
+            ?>
             </div>
             <div class="search">
             </div>
