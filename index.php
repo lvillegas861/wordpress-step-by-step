@@ -41,8 +41,8 @@
 
         <!-- banner/slider area -->
      <section class="banner">
-                  <?php if ( is_active_sidebar( 'custom_widgets' ) ) : ?>
-                  	<?php dynamic_sidebar( 'custom_widgets' ); ?>
+                  <?php if ( is_active_sidebar( 'home_banner_slider' ) ) : ?>
+                  	<?php dynamic_sidebar( 'home_banner_slider' ); ?>
                         <?php endif; ?>
 
         </section> 
@@ -50,9 +50,24 @@
         <!-- main content area -->
             <section class="content-holder">
             <article class="content">
+            <?php if (have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                   <h2><a href="<?php the_permalink();?>"><?php echo get_the_title(); ?></a></h2>
+                    <?php
+                      if ( has_post_thumbnail() ){
+                          the_post_thumbnail();
+                      }
+                      the_excerpt();
+                      ?>
+
+                      <?php endwhile;
+                      else:
+                        esc_html_e( 'sorry no pages matched your criteria', 'textdomain');
+                      endif;
+                      ?>
             </article>    
-            <article class="sidebar">
-            </article>
+            <aside class="sidebar">
+
+            </aside>
         </section>
 
         <!-- footer area -->
