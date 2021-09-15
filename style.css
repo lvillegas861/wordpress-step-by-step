@@ -4,8 +4,56 @@ Theme URI: http://wordpresssepttenth.local/
 Author: Lenis Villegas
 Author URI: http://wordpresssepttenth.local/
 Version: 1.0
+Requires at least 5.0
+Tested up to 5.8.1
+Requires PHP: 7.3.5
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
 */
- 
+ /* Body */
 body {
     background: #21759b;
+    margin: 0px;
+    }
+
+#container{
+width: 1200px;
+height: auto;
+margin: auto;
+background-color: aliceblue;
+    }
+
+
+/* Clearfix for float */
+.clearfix{
+    clear: both;
+}
+
+    /* Header area */
+    .main-header {
+        background: blanchedalmond;
+    }
+    .custom-logo {
+        width: 250px;
+        height: auto;
+        float: left;
+        padding: 15px;
+    }
+    
+    .custom-logo img{
+        width: 100%;
+        height: auto;
+    }
+
+    .search {
+        padding: 14px;
+        width: 300px;
+        float: right;
+        height: auto;
+    }
+    /* Featured Image */
+    .wp-post-image{
+        width: 100%;
+        height: 100%;
     }

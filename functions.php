@@ -1,9 +1,16 @@
 <?php
+// theme files
+function theme_files() {
+	wp_enqueue_style( 'main-style', get_template_directory_uri() . '/style.css');
+}
+add_action('wp_enqueue_scripts', 'theme_files');
+
 // theme support
-
-
 // custom logo customizer support
 add_theme_support( 'custom-logo' );
+
+// Title Tag Support
+add_theme_support( 'title_tag' );
 
 // featured image
 add_theme_support('post-thumbnails');
@@ -47,6 +54,24 @@ function custom_widgets() {
 		'after_widget'  => '',
 		'before_title'  => '',
 		'after_title'   => '',
+	) );
+
+    register_sidebar( array(
+		'name'          => 'Home Sidebar',
+		'id'            => 'home_sidebar',
+		'before_widget' => '<div class="sidebar"',
+		'after_widget'  => '</div>',
+		'before_title'  => 'h3',
+		'after_title'   => 'h3',
+	) );
+
+    register_sidebar( array(
+		'name'          => 'Home Footer Widgets',
+		'id'            => 'home_footer_widgets',
+		'before_widget' => '<aside class="footer_widget"',
+		'after_widget'  => '</aside>',
+		'before_title'  => 'h4',
+		'after_title'   => 'h4',
 	) );
 
 }

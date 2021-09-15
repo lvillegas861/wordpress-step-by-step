@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="<?php bloginfo('charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="profile" href="http://gmpg.org/xfn/11" />
+    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+        <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
     <?php wp_head(); ?>
 </head>
-<body>
-<?php wp_body_open( ); ?>
+<body <?php body_class(); ?>>
+     <?php wp_body_open(); ?>
+
+
   <div id="container">
       <!-- header area -->
       <header class="main-header">
@@ -33,6 +36,7 @@
                          value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
             </form>
             </div>
+            <div class="clearfix"></div>
             <div class="main-nav">
                 <?php wp_nav_menu(); ?>
         
@@ -66,19 +70,24 @@
                       ?>
             </article>    
             <aside class="sidebar">
-
+            <?php if ( is_active_sidebar( 'home_sidebar' ) ) : ?>
+                  	<?php dynamic_sidebar( 'home_sidebar' ); ?>
+                        <?php endif; ?>
             </aside>
         </section>
 
         <!-- footer area -->
         <footer class="main footer">
-            <aside class="footer-box"></aside>
-            <aside class="footer-box"></aside>
-            <aside class="footer-box"></aside>
-            <aside class="footer-box"></aside>
+        <?php if ( is_active_sidebar( 'home_footer_widgets' ) ) : ?>
+                  	<?php dynamic_sidebar( 'home_footer_widgets' ); ?>
+                        <?php endif; ?>
         </footer>
         <div class="copywrite">
+            <p><small><a href="<?php echo bloginfo('url'); ?>">
+            <?php echo bloginfo( 'name'); ?></a> |&copy <?php echo date ('Y'); ?></small></p>
         </div> 
   </div>
+
+  <?php wp_footer(); ?>
 </body>
 </html>
