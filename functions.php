@@ -2,10 +2,10 @@
 // theme files
 function theme_files() {
 	// styles
-	wp_enqueue_style( 'main-style', get_template_directory_uri() . '/style.css');
+	wp_enqueue_style( 'main-style', get_stylesheet_uri());
 
 	// scripts
-	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js',true, true );
+	wp_enqueue_script( 'jquery', get_template_directory_uri( ) . '/js/jquery.min.js' , true, true );
 }
 add_action('wp_enqueue_scripts', 'theme_files');
 

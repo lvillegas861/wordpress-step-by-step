@@ -82,7 +82,7 @@ value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
                   	<?php dynamic_sidebar( 'home_footer_widgets' ); ?>
                         <?php endif; ?>
         </footer>
-        <div class="copywrite">
+        <div class="copyright">
             <p><small><a href="<?php echo bloginfo('url'); ?>">
             <?php echo bloginfo( 'name'); ?></a> |&copy <?php echo date ('Y'); ?></small></p>
         </div> 
