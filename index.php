@@ -27,14 +27,14 @@
             ?>
             </div>
             <div class="search">
-            <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
-                     <input type="search" class="search-field"
-                         placeholder="<?php echo esc_attr_x( 'Search …', 'placeholder' ) ?>"
-                         value="<?php echo get_search_query() ?>" name="s"
-                         title="<?php echo esc_attr_x( 'Search for...', 'label' ) ?>" />
-                     <input type="submit" class="search-submit"
-                         value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
-            </form>
+            <form role="search" method="get" action="<?php echo home_url( '/' ); ?>">
+<input type="search" id="search-field"
+placeholder="<?php echo esc_attr_x( 'Search …', 'placeholder' ) ?>"
+value="<?php echo get_search_query() ?>" name="s"
+title="<?php echo esc_attr_x( 'Search for...', 'label' ) ?>" />
+<input id="search-btn" type="submit" class="search-submit"
+value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
+</form> 
             </div>
             <div class="clearfix"></div>
             <div class="main-nav">

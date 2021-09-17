@@ -18,7 +18,7 @@ body {
     }
 
 #container{
-width: 1200px;
+width: 1000px;
 height: auto;
 margin: auto;
 background-color: aliceblue;
@@ -47,11 +47,70 @@ background-color: aliceblue;
     }
 
     .search {
-        padding: 14px;
+        padding: 25px 15px 15px 15px;
         width: 300px;
         float: right;
         height: auto;
     }
+    
+    #search-field {
+        width: 290px;
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+        } 
+        
+    #search-btn {
+            width: 70px;
+            height: auto;
+            padding: 3px;
+            border: none;
+            border-radius: 5px;
+            background-color: #93c9ea;
+            color: white;
+            margin-left: -76px;
+            } 
+
+  /* main nav */
+     .main-nav {
+             background-color: #949494;
+            }
+    .main-nav ul{
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+    }
+    .main-nav ul > li{
+        display: inline-block;
+    }
+    .main-nav ul > li > a {
+        padding: 10px;
+        display: block;
+        color: blue;
+        font-size: small;
+        text-decoration: none;
+    }
+.main-nav ul > li > a:hover{
+    background-color:#2f4c5e ;
+}
+
+ .main-nav ul > li > ul{
+     background-color: #93c9ea;
+     position: absolute;
+     display: none;
+ }
+
+ .main-nav ul > li:hover ul{
+    display: block;
+}
+
+ .main-nav ul > li > ul > li{
+     display: block;
+ }
+.main-nav ul > li > ul > li > a{
+    width: 150px;
+} 
+
     /* Featured Image */
     .wp-post-image{
         width: 100%;
