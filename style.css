@@ -13,7 +13,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
  /* Body */
 body {
-    background: #21759b;
+    background: #91818A;
     margin: 0px;
     }
 
@@ -32,7 +32,7 @@ background-color: aliceblue;
 
     /* Header area */
     .main-header {
-        background: blanchedalmond;
+        background: #291F1E;
     }
     .custom-logo {
         width: 250px;
@@ -66,14 +66,14 @@ background-color: aliceblue;
             padding: 3px;
             border: none;
             border-radius: 5px;
-            background-color: #93c9ea;
+            background-color: #91818A;
             color: white;
             margin-left: -76px;
             } 
 
   /* main nav */
      .main-nav {
-             background-color: #949494;
+             background-color: #291F1E;
             }
     .main-nav ul{
         list-style-type: none;
@@ -86,18 +86,22 @@ background-color: aliceblue;
     .main-nav ul > li > a {
         padding: 10px;
         display: block;
-        color: blue;
+        color: #E7F0FF;
         font-size: small;
         text-decoration: none;
     }
+
+    /* dropdown */
+
 .main-nav ul > li > a:hover{
-    background-color:#2f4c5e ;
+    background-color:#91818A;
 }
 
  .main-nav ul > li > ul{
-     background-color: #93c9ea;
+     background-color: #91818A;
      position: absolute;
      display: none;
+     z-index: #999;
  }
 
  .main-nav ul > li:hover ul{
@@ -118,6 +122,38 @@ background-color: aliceblue;
     overflow: hidden;
 }
 
+/* main content */
+.content-holder {
+    font-size: large;
+    font-family: sans-serif;
+    color: white;
+    background-color: #F1E397;
+
+}
+.content {
+    /* article text color */
+    background-color: white;
+    color: #333;
+    width: 700px;
+    padding: 25px;
+    float: left;
+}
+
+
+/* content home sidebar */
+aside.sidebar {
+    width: 200px;
+    height: auto;
+    float: right;
+}
+.article{
+    margin-bottom: 30px;
+    display: block;
+}
+.article h2 a{
+    color: orange;
+    text-decoration: none;
+}
     /* Featured Image */
     .wp-post-image{
         width: 100%;

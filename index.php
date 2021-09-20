@@ -55,6 +55,7 @@ value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
             <section class="content-holder">
             <article class="content">
             <?php if (have_posts() ) : while ( have_posts() ) : the_post(); ?>
+            <div class="article">
                    <h2><a href="<?php the_permalink();?>"><?php echo get_the_title(); ?></a></h2>
                     <?php
                       if ( has_post_thumbnail() ){
@@ -62,7 +63,7 @@ value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
                       }
                       the_excerpt();
                       ?>
-
+            </div>
                       <?php endwhile;
                       else:
                         esc_html_e( 'sorry no pages matched your criteria', 'textdomain');
@@ -74,6 +75,7 @@ value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
                   	<?php dynamic_sidebar( 'home_sidebar' ); ?>
                         <?php endif; ?>
             </aside>
+            <div class="clearfix"></div>
         </section>
 
         <!-- footer area -->
